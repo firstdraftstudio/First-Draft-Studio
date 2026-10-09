@@ -1,0 +1,180 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="First Draft Studio builds professional websites and online stores for real businesses. Explore our work, pricing, and start your project." />
+  <meta property="og:title" content="First Draft Studio | Websites for Real Businesses" />
+  <meta property="og:description" content="Professional websites and online stores for real businesses." />
+  <meta property="og:type" content="website" />
+  <link rel="icon" href="./favicon.svg" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="./styles.css" />
+  <title>First Draft Studio | Websites for Real Businesses</title>
+</head>
+<body>
+  <div id="app-root"></div>
+  <template id="public-home-template">
+
+  <div class="cursor" aria-hidden="true"></div>
+  <div class="progress" aria-hidden="true"><span></span></div>
+  <header class="site-header" id="top">
+    <a class="brand" href="#top" aria-label="First Draft Studio home">
+      <span class="brand-mark">FD</span><span class="brand-name"><b>FIRST DRAFT</b><small>STUDIO</small></span>
+    </a>
+    <nav class="desktop-nav" aria-label="Primary navigation">
+      <a href="#work">Work</a><a href="#services">Services</a><a href="#pricing">Pricing</a><a href="#process">Process</a><a href="#about">About</a><a href="#faq">FAQ</a>
+    </nav>
+    <div class="nav-actions"><button class="account-trigger" id="account-trigger" type="button">Login <span>↗</span></button><a class="nav-cta" href="#contact">Let's Talk <span>↗</span></a></div>
+    <button class="menu-toggle" aria-label="Open menu" aria-expanded="false"><span></span><span></span></button>
+  </header>
+  <div class="mobile-menu" aria-hidden="true">
+    <a href="#work">Work</a><a href="#services">Services</a><a href="#pricing">Pricing</a><a href="#process">Process</a><a href="#about">About</a><a href="#faq">FAQ</a><a class="mobile-menu-cta" href="#contact">Start a conversation ↗</a>
+  </div>
+
+  <div class="auth-modal" id="auth-modal" aria-hidden="true">
+    <div class="auth-backdrop" data-auth-close></div>
+    <section class="auth-panel" role="dialog" aria-modal="true" aria-labelledby="auth-title">
+      <button class="modal-close" id="auth-close" type="button" aria-label="Close">×</button>
+      <div class="eyebrow">FIRST DRAFT / ACCOUNT</div>
+      <h2 id="auth-title">Your work,<br /><em>in one place.</em></h2>
+      <p class="auth-copy">Create an account to send inquiries, follow conversations, and keep track of projects with First Draft Studio.</p>
+      <div class="auth-tabs"><button class="auth-tab active" data-auth-mode="login">Log in</button><button class="auth-tab" data-auth-mode="signup">Create account</button></div>
+      <form id="auth-form" class="auth-form">
+        <div class="auth-signup-only hidden"><label>Full name<input name="full_name" autocomplete="name" /></label><label>Business name<input name="business_name" autocomplete="organization" /></label><label>Phone<input name="phone" autocomplete="tel" /></label></div>
+        <label>Email<input type="email" name="email" autocomplete="email" required /></label>
+        <label>Password<input type="password" name="password" autocomplete="current-password" minlength="6" required /></label>
+        <button class="button button-dark" type="submit" id="auth-submit">Log in <span>↗</span></button>
+        <button class="auth-reset" type="button" id="auth-reset">Forgot your password?</button>
+        <p class="form-inline-status" id="auth-status" aria-live="polite"></p>\n        <p class="auth-legal-note">By creating an account, you acknowledge our <a href="./terms.html" target="_blank" rel="noopener">Terms of Service</a> and <a href="./privacy.html" target="_blank" rel="noopener">Privacy Policy</a>.</p>
+      </form>
+    </section>
+  </div>
+
+  <main>
+    <section class="hero section-pad">
+      <div class="hero-kicker reveal"><span>01</span> INDEPENDENT WEB STUDIO</div>
+      <div class="hero-grid">
+        <div class="hero-copy reveal">
+          <h1>Websites<br /><em>for real</em><br />businesses.</h1>
+          <p class="hero-lede">We build professional websites and online stores that help real businesses grow beyond their storefront.</p>
+          <div class="hero-actions"><a class="button button-dark" href="#work">View our work <span>↓</span></a><a class="text-link" href="#contact">Let's talk <span>↗</span></a></div>
+        </div>
+        <div class="hero-art reveal">
+          <div class="draft-sheet">
+            <div class="sheet-top"><span>FIRST DRAFT / 001</span><span>WEB</span></div>
+            <div class="sheet-lines"><i></i><i></i><i></i><i></i></div>
+            <div class="sheet-word">IDEA<br /><strong>→</strong><br />ONLINE</div>
+            <div class="sheet-stamp">BUILT<br />FOR<br />BUSINESS</div>
+          </div>
+          <div class="floating-note">Every great website<br />starts with an idea.</div>
+        </div>
+      </div>
+      <div class="hero-foot"><span>SCROLL TO EXPLORE</span><span class="scroll-line"></span><span>RJ / IN</span></div>
+    </section>
+
+    <section class="statement section-pad" id="services">
+      <div class="eyebrow">02 / WHAT WE BUILD</div>
+      <div class="statement-grid">
+        <h2>Your business<br /><em>doesn't have to stay</em><br />limited to your storefront.</h2>
+        <div class="statement-copy"><p>A good website gives your business another place to be found, understood, contacted, and remembered.</p><a class="text-link" href="#contact">Build yours <span>↗</span></a></div>
+      </div>
+      <div class="services-list">
+        <a class="service reveal" href="#contact" data-site-type="Business website"><span class="service-num">01</span><div><h3>Business websites</h3><p>Professional online presence for businesses that need a strong starting point.</p></div><span class="service-arrow">↗</span></a>
+        <a class="service reveal" href="#contact" data-site-type="Online store"><span class="service-num">02</span><div><h3>Online stores</h3><p>Custom ecommerce experiences where customers can browse products and place orders.</p></div><span class="service-arrow">↗</span></a>
+        <a class="service reveal" href="#contact" data-site-type="Custom website"><span class="service-num">03</span><div><h3>Custom experiences</h3><p>More advanced websites shaped around the specific needs of your business.</p></div><span class="service-arrow">↗</span></a>
+      </div>
+    </section>
+
+    <section class="benefits section-pad">
+      <div class="eyebrow">03 / WHY A WEBSITE</div>
+      <div class="benefit-intro"><h2>More than<br /><em>an address online.</em></h2><p>A website can become the part of your business that never closes.</p></div>
+      <div class="benefit-grid">
+        <div class="benefit big reveal"><span>01</span><h3>Reach<br />more customers</h3><p>Give people another way to discover your business.</p></div>
+        <div class="benefit reveal"><span>02</span><h3>Sell online</h3><p>Let customers browse and order from wherever they are.</p></div>
+        <div class="benefit reveal"><span>03</span><h3>Available 24/7</h3><p>Your business information stays accessible beyond opening hours.</p></div>
+        <div class="benefit reveal"><span>04</span><h3>Easy to find</h3><p>Give customers a clear place to learn about what you offer.</p></div>
+        <div class="benefit reveal"><span>05</span><h3>Easy to contact</h3><p>Turn curiosity into a simple next step.</p></div>
+        <div class="benefit reveal"><span>06</span><h3>Build your brand</h3><p>Present your business with the care it deserves.</p></div>
+        <div class="benefit reveal"><span>07</span><h3>Showcase<br />what you offer</h3><p>Services, products, work, story, all in one place.</p></div>
+        <div class="benefit dark reveal"><span>08</span><h3>Create room<br />to grow</h3><p>A stronger online presence gives your next step somewhere to live.</p></div>
+      </div>
+    </section>
+
+    <section class="work section-pad" id="work">
+      <div class="section-heading"><div><div class="eyebrow">04 / SELECTED WORK</div><h2>Built to be<br /><em>seen.</em></h2></div><p>Three demonstrations. Three different directions. One idea: these aren't just templates.</p></div>
+      <div class="project-stack">
+        <article class="project project-business reveal"><button class="project-visual business-preview" type="button" data-project="business" aria-label="Preview Business Website project"><div class="mock-browser"><div class="browser-bar"><i></i><i></i><i></i></div><div class="business-ui"><span class="mini-label">YOUR BUSINESS</span><h3>A better<br /><em>first impression.</em></h3><div class="mini-blocks"><b></b><b></b><b></b></div></div></div></div><div class="project-info"><div><span class="project-type">BUSINESS WEBSITE</span><h3>Business Website</h3><p>Professional online presence for businesses that need a strong, polished starting point.</p></div><a class="circle-link" href="#contact" aria-label="Discuss a business website">↗</a></div></article>
+        <article class="project project-vera reveal"><button class="project-visual vera-preview" type="button" data-project="vera" aria-label="Preview VERA project"><div class="vera-brand">VERA</div><div class="vera-copy">THE<br /><em>NEW</em><br />STANDARD</div><div class="vera-shape"></div></button><div class="project-info"><div><span class="project-type">ECOMMERCE / FASHION</span><h3>VERA</h3><p>A premium clothing storefront demonstrating product browsing, variants, cart, checkout, accounts, orders, and more.</p></div><a class="circle-link" href="https://vera-ecommerce-demo.dammzml69420.workers.dev/" target="_blank" rel="noopener" aria-label="View VERA live demo">↗</a></div></article>
+        <article class="project project-novaire reveal"><button class="project-visual novaire-preview" type="button" data-project="novaire" aria-label="Preview NOVAIRE project"><div class="nova-top"><span>NOVAIRE</span><span>OBJECTS / 01</span></div><div class="nova-copy">ROOMS<br /><em>TO LIVE</em><br />WITH.</div><div class="nova-orb"></div></button><div class="project-info"><div><span class="project-type">ECOMMERCE / LIFESTYLE</span><h3>NOVAIRE</h3><p>Our flagship ecommerce demonstration, built around products, content, discovery, and serious merchant functionality.</p></div><a class="circle-link" href="https://novaire-ecommerce-demo.dammzml69420.workers.dev/" target="_blank" rel="noopener" aria-label="View NOVAIRE live demo">↗</a></div></article>
+        <article class="project project-aavira reveal"><button class="project-visual aavira-preview" type="button" data-project="aavira" aria-label="Preview AAVIRA project"><div class="aavira-top"><span>AAVIRA</span><span>SHOWCASE / 01</span></div><div class="aavira-copy">QUIET<br /><em>FORM.</em></div><div class="aavira-frame"><span></span><span></span><span></span></div></button><div class="project-info"><div><span class="project-type">PREMIUM SHOWCASE</span><h3>AAVIRA</h3><p>A refined showcase experience demonstrating how a premium brand can present its story, products, and identity online.</p></div><a class="circle-link" href="https://aavira-premium-showcase.lovable.app/" target="_blank" rel="noopener" aria-label="View AAVIRA live demo">↗</a></div></article>
+      </div>
+    </section>
+
+    <section class="pricing section-pad" id="pricing">
+      <div class="eyebrow">05 / PRICING</div><div class="pricing-head"><h2>Choose a starting<br /><em>point.</em></h2><p>Every business is different. These packages are a clear starting point, not a locked box. We'll discuss the final scope before development begins.</p></div>
+      <div class="pricing-note"><span>STARTING PRICES</span><span>EVERY PROJECT IS DISCUSSED FIRST</span></div>
+      <div class="price-grid">
+        <article class="price-card reveal"><div class="price-top"><span>01</span><span>STARTER</span></div><div class="price-main"><div class="price">₹3,000</div><p class="price-fit">FOR BUSINESSES GETTING ONLINE</p><h3>Affordable start</h3><p>A straightforward professional website for businesses that need a clean, credible online presence.</p></div><ul><li>Professional business presence</li><li>Essential pages & information</li><li>Responsive design</li><li>Clear contact path</li></ul><div class="price-actions"><button class="price-more" type="button" data-price-detail="3000">View more <span>+</span></button><a href="#contact" data-package="₹3,000" class="price-cta">Discuss this option <span>↗</span></a></div></article>
+        <article class="price-card featured value-card reveal"><div class="recommended"><span>BEST VALUE</span><i></i></div><div class="price-top"><span>02</span><span>ESSENTIAL</span></div><div class="price-main"><div class="price">₹5,000</div><p class="price-fit">FOR BUSINESSES THAT WANT MORE</p><h3>Strong online presence</h3><p>A more complete website with stronger presentation, clearer structure, and room for better storytelling.</p></div><ul><li>Expanded page structure</li><li>Premium visual direction</li><li>Responsive design</li><li>Project-specific planning</li></ul><div class="price-actions"><button class="price-more" type="button" data-price-detail="5000">View more <span>+</span></button><a href="#contact" data-package="₹5,000" class="price-cta">Choose this starting point <span>↗</span></a></div></article>
+        <article class="price-card premium-card reveal"><div class="premium-label">PREMIUM</div><div class="price-top"><span>03</span><span>PREMIUM</span></div><div class="price-main"><div class="price">₹10,000</div><p class="price-fit">FOR A MORE SERIOUS ONLINE PRESENCE</p><h3>Premium business site</h3><p>A substantial custom website for businesses ready for a more distinctive and polished digital presence.</p></div><ul><li>Premium multi-page experience</li><li>Custom visual direction</li><li>Advanced content structure</li><li>Mobile-first refinement</li></ul><div class="price-actions"><button class="price-more" type="button" data-price-detail="10000">View more <span>+</span></button><a href="#contact" data-package="₹10,000" class="price-cta">Discuss this option <span>↗</span></a></div></article>
+        <article class="price-card ultra-card dark-card reveal"><div class="premium-label">SIGNATURE</div><div class="price-top"><span>04</span><span>ULTRA</span></div><div class="price-main"><div class="price">₹20,000</div><p class="price-fit">FOR BUSINESSES THAT WANT THE FULL TREATMENT</p><h3>Ultra-professional</h3><p>A high-end custom website shaped around a business with specific requirements and a bigger online ambition.</p></div><ul><li>Highly custom experience</li><li>Advanced interactions</li><li>Extensive page structure</li><li>Detailed project planning</li></ul><div class="price-actions"><button class="price-more" type="button" data-price-detail="20000">View more <span>+</span></button><a href="#contact" data-package="₹20,000" class="price-cta">Start a conversation <span>↗</span></a></div></article>
+      </div>
+      <div class="pricing-foot"><div class="pricing-principle"><span>01</span><strong>Choose a direction.</strong><p>Pick the starting point that feels closest to what your business needs.</p></div><div class="pricing-principle"><span>02</span><strong>Talk it through.</strong><p>We'll discuss your business, pages, features, content and final scope.</p></div><div class="pricing-principle"><span>03</span><strong>Build what fits.</strong><p>The final project is shaped around your requirements, not a rigid template.</p></div></div>
+      <div class="addon"><div><span class="addon-label">OPTIONAL ADD-ON</span><h3>Online ordering <strong>+₹1,000</strong></h3></div><p>Want customers to order directly from your website? We can add online ordering to your project.</p></div>
+    </section>
+
+    <section class="process section-pad" id="process">
+      <div class="eyebrow">06 / THE PROCESS</div><div class="process-head"><h2>From first idea<br />to <em>finished site.</em></h2><p>No jargon. No mystery. Just a straightforward process built around your business.</p></div>
+      <div class="process-list">
+        <div class="step reveal"><span>01</span><div><h3>Tell us about your business</h3><p>What you do, what you sell, who you serve, and what you want the website to achieve.</p></div></div>
+        <div class="step reveal"><span>02</span><div><h3>We plan the website</h3><p>We work out the pages, structure, content direction, and the right approach for your needs.</p></div></div>
+        <div class="step reveal"><span>03</span><div><h3>We design & build</h3><p>Your website takes shape with the visual direction and functionality we agreed on.</p></div></div>
+        <div class="step reveal"><span>04</span><div><h3>You review it</h3><p>You see the work, give feedback, and we refine the important details together.</p></div></div>
+        <div class="step reveal"><span>05</span><div><h3>We launch</h3><p>Once everything is ready, your new website goes live.</p></div></div>
+      </div>
+    </section>
+
+    <section class="about section-pad" id="about">
+      <div class="eyebrow">07 / ABOUT FIRST DRAFT</div><div class="about-grid"><div><h2>Small studio.<br /><em>Hands-on work.</em></h2></div><div class="about-copy"><p>First Draft Studio exists to help real businesses build a professional presence online.</p><p>We're a small, hands-on studio. The people behind the business stay directly involved in the work, from understanding what you need to shaping and building the website itself.</p><p>That means you don't get passed through a maze of departments. You get a conversation, a plan, and a website built around your business.</p><a class="button button-dark" href="#contact">Talk about your project <span>↗</span></a></div></div>
+    </section>
+
+    <section class="faq section-pad" id="faq"><div class="eyebrow">08 / FAQ</div><div class="faq-grid"><div><h2>Questions,<br /><em>answered.</em></h2></div><div class="accordion">
+      <details open><summary>Do I need to know anything about websites?<span>+</span></summary><p>No. We handle the technical side. We first understand your business and what you want the website to do.</p></details>
+      <details><summary>Can my website sell products?<span>+</span></summary><p>Yes. Online ordering and ecommerce functionality are available depending on what your business needs.</p></details>
+      <details><summary>Can I see examples?<span>+</span></summary><p>Yes. Explore the live demonstrations in our work section to see different types of websites we can build.</p></details>
+      <details><summary>Do I have to choose a package immediately?<span>+</span></summary><p>No. The packages are starting points. We'll discuss your requirements before development begins.</p></details>
+      <details><summary>Can you make a website for my specific business?<span>+</span></summary><p>Yes. First Draft Studio builds custom websites around the business and its goals.</p></details>
+    </div></div></section>
+
+    <section class="contact section-pad" id="contact"><div class="contact-shell"><div class="contact-intro"><div class="eyebrow">09 / START A CONVERSATION</div><h2>Let's turn your<br /><em>idea into a site.</em></h2><p>Tell us a little about your business. We'll talk through what you need before anything is built.</p><div class="contact-note">No checkout.<br />No automatic package order.<br />Just a conversation.</div></div><form id="inquiry-form" class="inquiry-form"><div class="form-row"><label>Name<input name="name" required autocomplete="name" placeholder="Your name" /></label><label>Business name<input name="business" required placeholder="Your business" /></label></div><div class="form-row"><label>Contact information<input name="contact" required placeholder="Phone, WhatsApp or email" /></label><label>Website type<select name="type"><option>Business website</option><option>Online store</option><option>Custom website</option><option>Not sure yet</option></select></label></div><label>What does your business do?<textarea name="about" rows="3" required placeholder="Tell us a little about it..."></textarea></label><label>What should the website achieve?<textarea name="goal" rows="3" placeholder="More enquiries, showcase products, online ordering, etc."></textarea></label><div class="form-row"><label>Package you're considering<select name="package"><option>Not sure yet</option><option>₹3,000</option><option>₹5,000</option><option>₹10,000</option><option>₹20,000</option></select></label><label>Online ordering?<select name="ordering"><option>No</option><option>Yes, tell me more</option><option>I'm not sure</option></select></label></div><label>Anything else?<textarea name="message" rows="3" placeholder="Anything you'd like us to know..."></textarea></label><button class="button button-dark submit-btn" type="submit">Send inquiry <span>↗</span></button><p class="form-footnote">This is an inquiry form. It does not charge you or automatically place a website order.</p><span class="form-footnote">By submitting details, you acknowledge the <a href="./privacy.html" target="_blank" rel="noopener">Privacy Policy</a>. See <a href="./service-delivery.html">Service & Delivery</a> and <a href="./contact-grievance.html">Contact & Grievance</a>.</span><div class="form-success" role="status" aria-live="polite"><strong>Thanks. We've received your message.</strong><span>We'll get back to you to discuss your business and what you'd like to build.</span></div></form></div></section>
+  </main>
+
+  <footer class="footer section-pad"><div class="footer-top"><a class="brand" href="#top"><span class="brand-mark">FD</span><span class="brand-name"><b>FIRST DRAFT</b><small>STUDIO</small></span></a><div class="footer-tag">WEBSITES FOR<br />REAL BUSINESSES.</div><a class="footer-cta" href="#contact">Start a conversation ↗</a></div><div class="footer-bottom"><span>© <span data-year>2026</span> First Draft Studio</span><div><a href="#work">Work</a><a href="./privacy.html">Privacy Policy</a><a href="./terms.html">Terms of Service</a><a href="./refunds.html">Refunds</a><a href="./service-delivery.html">Service & Delivery</a><a href="./contact-grievance.html">Contact & Grievance</a></div><span>Made for businesses, not buzzwords.</span></div></footer>
+  <div class="project-modal" id="project-modal" aria-hidden="true">
+    <div class="modal-panel" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+      <button class="modal-close" id="modal-close" aria-label="Close project preview">×</button>
+      <div class="modal-kicker" id="modal-category"></div>
+      <h2 id="modal-title"></h2>
+      <p id="modal-body"></p>
+      <a class="button button-dark" id="modal-link" href="#contact">Open ↗</a>
+    </div>
+  </div>
+  <div class="price-modal" id="price-modal" aria-hidden="true">
+    <div class="price-modal-panel" role="dialog" aria-modal="true" aria-labelledby="price-modal-title">
+      <button class="modal-close" id="price-modal-close" aria-label="Close package details">×</button>
+      <div class="price-modal-top"><span id="price-modal-index"></span><span id="price-modal-tier"></span></div>
+      <div class="price-modal-price" id="price-modal-price"></div>
+      <div class="modal-kicker" id="price-modal-fit"></div>
+      <h2 id="price-modal-title"></h2>
+      <p id="price-modal-body"></p>
+      <div class="price-modal-grid"><div><span>INCLUDED</span><ul id="price-modal-list"></ul></div><div><span>BEST FOR</span><p id="price-modal-best"></p></div></div>
+      <div class="price-modal-actions"><button class="button button-dark" id="price-modal-discuss" type="button">Discuss this package <span>↗</span></button><button class="price-modal-close-link" type="button" id="price-modal-close-link">Back to pricing</button></div>
+    </div>
+  </div>
+  </template>
+  <script type="module" src="/script.js"></script>
+</body>
+</html>
